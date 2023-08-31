@@ -1,0 +1,9 @@
+<ng-container *ngIf="artWorkFacade.artworks$ | async as artworks">
+  <h2>List of Arts Collections</h2>
+  <section class="arts__container">
+    <app-card
+      [artwork]="artwork"
+      *ngFor="let artwork of artworks.data"
+    ></app-card>
+  </section>
+</ng-container>

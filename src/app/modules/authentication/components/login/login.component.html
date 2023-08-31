@@ -1,0 +1,32 @@
+<form [formGroup]="signUpForm" (ngSubmit)="handleSubmit()">
+  <h2>Login</h2>
+  <h3>Enter your data to access the application</h3>
+  <span class="p-input-icon-left">
+    <i class="pi pi-at"></i>
+    <input
+      type="text"
+      pInputText
+      formControlName="email"
+      class="p-inputtext-lg"
+      placeholder="Email"
+    />
+  </span>
+  <span class="p-input-icon-left">
+    <i class="pi pi-lock"></i>
+    <input
+      type="password"
+      pInputText
+      formControlName="password"
+      class="p-inputtext-lg"
+      placeholder="Password"
+    />
+  </span>
+  <button
+    type="submit"
+    label="Sing In"
+    pButton
+    pRipple
+    class="button"
+    [disabled]="!signUpForm.valid"
+  ></button>
+</form>

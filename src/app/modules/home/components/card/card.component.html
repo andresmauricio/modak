@@ -1,0 +1,16 @@
+<div class="arts__card">
+  <h5>{{ artwork.title }}</h5>
+  <img
+    [src]="artwork.image_preview"
+    [alt]="artwork.title"
+    loading="lazy"
+    width="350px"
+    height="350px"
+  />
+  <div class="arts__card--chips">
+    <p-chip
+      [label]="chip"
+      *ngFor="let chip of artwork.classification_titles.slice(0, 3)"
+    ></p-chip>
+  </div>
+</div>
